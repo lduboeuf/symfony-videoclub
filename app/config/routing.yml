@@ -1,0 +1,10 @@
+afpa_dl_video:
+    resource: "@AfpaDLVideoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+homepage:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'homepage.html.twig'

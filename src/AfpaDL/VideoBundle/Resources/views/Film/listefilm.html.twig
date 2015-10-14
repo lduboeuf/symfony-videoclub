@@ -1,0 +1,15 @@
+{% extends app.request.isxmlhttprequest ? "" : "::homepage.html.twig" %}
+{#extends '::homepage.html.twig'#}
+
+ {% block title_content %}<h1>Liste des films : <em> {{ libelle_typefilm }}</em></h1>{% endblock %}
+
+{% block main %}
+
+		{% for film in films %}     
+		         {{ include('AfpaDLVideoBundle:Film:film_short.html.twig', {'film': film}) }}
+		{% endfor %}
+                     	
+                        
+{% endblock %}
+
+

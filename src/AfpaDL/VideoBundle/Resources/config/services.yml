@@ -1,0 +1,22 @@
+services:
+#    afpa_dl_video.example:
+#        class: AfpaDL\VideoBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+
+  pdo:
+    class: PDO
+    arguments:
+        - "mysql:dbname=%database_name%;charset=utf8"
+        - %database_user%
+        - %database_password%
+        
+
+  filmdao:
+    class: AfpaDL\VideoBundle\Modele\dao\FilmDAO
+    arguments: ["@pdo"]
+    
+  
+  typefilmdao:
+    class: AfpaDL\VideoBundle\Modele\dao\TypeFilmDAO
+    arguments: ["@pdo"]

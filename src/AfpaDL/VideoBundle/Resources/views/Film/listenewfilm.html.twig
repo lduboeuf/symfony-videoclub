@@ -1,0 +1,14 @@
+
+
+{% block title_content %}<h1>Liste des nouveautés</h1>{% endblock %}
+
+{% block main %}
+
+		{% for film in films %}     
+		         {{ include('AfpaDLVideoBundle:Film:film_short.html.twig', {'film': film}) }}
+		{% endfor %}
+                     	
+                        
+{% endblock %}
+
+

@@ -1,0 +1,10 @@
+<ul>
+
+{% for typefilm in typefilms %}     
+			
+            <li><a href="{{ path('film_list', { 'codeTypeFilm':  typefilm.codeFilm  }) }}">{{ typefilm.libelle }}</a></li>
+
+{% endfor %}
+
+
+</ul>

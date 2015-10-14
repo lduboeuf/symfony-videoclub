@@ -1,0 +1,24 @@
+afpa_dl_video_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: "AfpaDLVideoBundle:Default:index" }
+    
+
+type_film_list:
+    path: /ListeTypeFilm
+    defaults: { _controller: "AfpaDLVideoBundle:TypeFilm:listeTypeFilm" }
+    
+film_list:
+    path: /Films/
+    defaults: { _controller: "AfpaDLVideoBundle:Film:listeFilm" }
+
+film_by_id:
+    path: /Films/{idfilm}
+    defaults: { _controller: "AfpaDLVideoBundle:Film:ficheFilm" }
+    
+login:
+    path: /login
+    defaults: { _controller: "AfpaDLVideoBundle:Security:login" }
+    
+login_check:
+    path: /login_check
+    defaults: { _controller: "AfpaDLVideoBundle:Security:loginCheck" }
